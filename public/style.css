@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'mystart-font';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://mystart.mystartcdn.com/new-tab/olgyoga/fonts/mystart-font/mystart-font.woff2?57872621) format('woff2');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('http://veented.info/waxom/wp-content/uploads/2015/11/mountain2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+#module-todolist {
+    position: absolute;
+    background-color: rgba(32, 32, 32, 0.75);
+    width: 640px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+#module-todolist .boxfooter {
+    margin: 0 15px 5px 15px;
+    border-top: 1px solid #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    position: relative;
+}
+
+.boxfooter input {
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent !important;
+    display: inline-block;
+    width: 240px;
+    height: 45px;
+    margin-top: -3px;
+    outline: none;
+    border: 0px;
+    font-size: 17px;
+    line-height: 43px;
+    font-weight: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    padding: 1px 0;
+    margin-top: -3px;
+    margin-bottom: 0;
+}
+
+#module-todolist .checkbox {
+    width: 0px;
+    height: 20px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.50;
+    position: absolute;
+}
+
+#module-todolist .checkbox:after {
+    display: inline-block;
+    content: '\e822';
+    font-family: "mystart-font";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: inherit;
+    margin-left: -25px;
+}
+
+#module-todolist .done .checkbox:after {
+    content: '\e81f';
+}
+
+#module-todolist li {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    padding: 5px 30px 5px 46px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#module-todolist li.done {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: line-through;
+}
+
+#module-todolist .boxtitle {
+    font-size: 19px;
+    color: #fff;
+    background-color: rgba(32, 32, 32, 0.75);
+    padding: 16px 16px 17px;
+}
+
+#module-todolist li:hover {
+    background-color: rgba(0, 0, 0, 0.333) !important;
+}
+
+#module-todolist li:hover .deletebtn {
+    opacity: 0.5;
+}
+
+#module-todolist .deletebtn {
+    float: right;
+    font-size: 8px;
+    opacity: 0;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+#module-todolist .deletebtn:before {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+    line-height: 18px;
+    font-weight: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.50;
+    position: absolute;
+    display: inline-block;
+    content: '\e808';
+    font-family: "mystart-font";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#module-todolist span.deletebtn:hover {
+    opacity: 1;
+}
+
+.tasks {
+    min-height: 260px;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 7px 0;
+    min-height: 7px;
+}
+
+.edit {
+    width: 540px;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding: 0 5px 1px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: inherit;
+    display: none;
+}
+
+.editing .edit {
+    display: block;
+}
+
+.editing .task-title {
+    display: none;
+}
+
+#input {
+    width: 600px;
+}
